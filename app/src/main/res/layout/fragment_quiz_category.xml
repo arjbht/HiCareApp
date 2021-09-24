@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:text="Shiksha"
+                android:text="@string/shiksha"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="18sp"/>

@@ -31,7 +31,7 @@ class QuizActivity : BaseActivity() {
         val intent = intent
         val puzzleId = intent.getIntExtra("puzzleId", -1)
         val puzzleTitle = intent.getStringExtra("puzzleTitle").toString()
-        binding.titleTv.text = "Shiksha - $puzzleTitle"
+        binding.titleTv.text = "${R.string.shiksha} - $puzzleTitle"
         replaceFragment(QuizFragment.newInstance(puzzleId, puzzleTitle), "QuizActivity - QuizFragment")
     }
 

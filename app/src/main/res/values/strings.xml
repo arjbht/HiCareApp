@@ -649,5 +649,12 @@
     <string name="shiksha_total_score">TOTAL SCORE</string>
     <string name="shiksha_level">LEVEL</string>
 
+    <string name="shiksha_finish">Finish</string>
+    <string name="shiksha_next">Next</string>
+    <string name="shiksha_cancel">Cancel</string>
+    <string name="shiksha_quit">Quit</string>
+    <string name="shiksha_confirm">Confirm</string>
+    <string name="shiksha">Shiksha</string>
+
 
 </resources>

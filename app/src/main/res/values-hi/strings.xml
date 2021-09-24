@@ -1083,5 +1083,11 @@
     <string name="shiksha_total_score">कुल स्कोर</string>
     <string name="shiksha_level">स्तर</string>
 
+    <string name="shiksha_finish">समाप्ति</string>
+    <string name="shiksha_next">अगला</string>
+    <string name="shiksha_cancel">रद्द करें</string>
+    <string name="shiksha_quit">निस्तार</string>
+    <string name="shiksha_confirm">पक्का</string>
+    <string name="shiksha">शिक्षा</string>
 
 </resources>

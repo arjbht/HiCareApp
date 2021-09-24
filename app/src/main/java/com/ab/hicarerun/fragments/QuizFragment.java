@@ -120,7 +120,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
         Bundle args = new Bundle();
         args.putInt(ARGS_ID, puzzleId);
         fragment.setArguments(args);
-        puzzleT = "Shiksha - "+puzzleTitle;
+        puzzleT = R.string.shiksha+" - "+puzzleTitle;
         return fragment;
     }
 
@@ -164,7 +164,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
         getQuestions();
         resetTimer();
         if (index == questions.size()-1){
-            mFragmentQuizBinding.nextBtn.setText("Finish");
+            mFragmentQuizBinding.nextBtn.setText(R.string.shiksha_finish);
         }
         mFragmentQuizBinding.nextBtn.setOnClickListener(view1 -> {
             givenAnswers.clear();
@@ -222,7 +222,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         builder.setTitle(R.string.shiksha_alert);
         builder.setMessage(R.string.shiksha_quit_alert);
-        builder.setPositiveButton("Quit", (dialog, which) -> {
+        builder.setPositiveButton(R.string.shiksha_quit, (dialog, which) -> {
             dialog.cancel();
             if (saveAnswers.isEmpty()) {
                 Log.d("TAG", "Finish called");
@@ -237,7 +237,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
                 }
             }
         });
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton(R.string.shiksha_cancel, (dialog, which) -> dialog.cancel());
         builder.show();
     }
 
@@ -245,7 +245,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         builder.setTitle(R.string.shiksha_alert);
         builder.setMessage(R.string.shiksha_noquiz_alert);
-        builder.setPositiveButton("Quit", (dialog, which) -> {
+        builder.setPositiveButton(R.string.shiksha_quit, (dialog, which) -> {
             dialog.cancel();
             requireActivity().finish();
         });
@@ -344,7 +344,7 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
 
     private void setNextQuestion(boolean isNextPressed) {
         if (index == questions.size()-1){
-            mFragmentQuizBinding.nextBtn.setText("Finish");
+            mFragmentQuizBinding.nextBtn.setText(R.string.shiksha_finish);
         }
         mFragmentQuizBinding.nextBtn.setEnabled(false);
         if (timer != null) {
@@ -510,9 +510,9 @@ public class QuizFragment extends BaseFragment implements Player.EventListener {
                 }
 
                 if (vidIndex == question.getDependentQuestionList().size() - 1 && index == questions.size() - 1) {
-                    mFragmentQuizBinding.nextBtn.setText("Finish");
+                    mFragmentQuizBinding.nextBtn.setText(R.string.shiksha_finish);
                 }else {
-                    mFragmentQuizBinding.nextBtn.setText("Next");
+                    mFragmentQuizBinding.nextBtn.setText(R.string.shiksha_next);
                 }
             } else {
                 puzzleType = "normal";
